@@ -3,7 +3,7 @@
 # -------------------------------------------------------------------------
 # Stampede build specific settings
 # -------------------------------------------------------------------------
-source /opt/apps/lmod/8.5.11/init/csh
+source /opt/apps/lmod/8.4.26/init/csh
 
 module reset
 module load hdf5 

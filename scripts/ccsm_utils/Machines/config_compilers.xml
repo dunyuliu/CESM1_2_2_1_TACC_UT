@@ -744,5 +744,24 @@ for mct, etc.
   <PIO_FILESYSTEM_HINTS>lustre</PIO_FILESYSTEM_HINTS>
   <ADD_CPPDEFS> -DLINUX </ADD_CPPDEFS>
 </compiler>
-   
+ 
+<!-- 20211102 added by Dunyu Liu for ls6. -->
+<compiler COMPILER="intel" OS="linux" MACH="ls6">
+  <SFC>ifort</SFC>
+  <SCC>icc</SCC>
+  <SCXX>icpc</SCXX>
+  <MPIFC>mpiifort</MPIFC>
+  <MPICC>mpicc</MPICC>
+  <MPICXX>mpicxx</MPICXX>
+  <MPI_LIB_NAME>impi</MPI_LIB_NAME>
+  <MPI_PATH> /opt/intel/impi/2019.9.304 /opt/apps/intel19/impi19_0</MPI_PATH>
+  <NETCDF_PATH> /opt/apps/intel19/netcdf/4.6.2/x86_64 </NETCDF_PATH>
+  <PNETCDF_PATH> /opt/apps/intel19/impi19_0/pnetcdf/1.12.2 </PNETCDF_PATH>
+  <ADD_FFLAGS> -xHost </ADD_FFLAGS>
+  <ADD_CFLAGS> -xHost </ADD_CFLAGS>
+  <ADD_SLIBS>-L/opt/apps/intel19/netcdf/4.6.2/x86_64/lib -lnetcdff -lnetcdf</ADD_SLIBS>
+  <PIO_FILESYSTEM_HINTS>lustre</PIO_FILESYSTEM_HINTS>
+  <ADD_CPPDEFS> -DLINUX </ADD_CPPDEFS>
+</compiler>
+
 </config_compilers>

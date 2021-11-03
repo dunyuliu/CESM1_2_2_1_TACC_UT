@@ -521,5 +521,28 @@
         <GMAKE_J>1</GMAKE_J>
         <MAX_TASKS_PER_NODE>48</MAX_TASKS_PER_NODE> <!--for sky lake nodes only.-->
 </machine>
-	
+
+<machine MACH="ls6">
+        <DESC>ls6 at TACC</DESC>                                 <!-- can be anything -->
+        <OS>linux</OS>                              <!-- LINUX,Darwin,CNL,AIX,BGL,BGP -->
+        <COMPILERS>intel,ibm,pgi,pathscale,gnu,cray,lahey</COMPILERS>     <!-- intel,ibm,pgi,pathscale,gnu,cray,lahey -->
+        <COMPILER>intel</COMPILER>     <!-- intel,ibm,pgi,pathscale,gnu,cray,lahey -->
+        <MPILIBS>openmpi,mpich,mpt,mpt,ibm,mpi-serial,impi</MPILIBS>                <!-- openmpi, mpich, ibm, mpi-serial -->
+        <MPILIB>impi</MPILIB>                <!-- openmpi, mpich, ibm, mpi-serial -->
+        <RUNDIR>/scratch/07931/dunyuliu/CESM1.2.2.1/cases/$CASE/run</RUNDIR>                       <!-- complete path to the run directory -->
+        <EXEROOT>/scratch/07931/dunyuliu/CESM1.2.2.1/cases/$CASE/bld</EXEROOT>                     <!-- complete path to the build directory -->
+        <DIN_LOC_ROOT>/scratch/07931/dunyuliu/CESM1.2.2.1/inputdata</DIN_LOC_ROOT>           <!-- complete path to the inputdata directory -->
+        <DIN_LOC_ROOT_CLMFORC>USERDEFINED_optional_build</DIN_LOC_ROOT_CLMFORC> <!-- path to the optional forcing data for CLM (for CRUNCEP forcing) -->
+        <DOUT_S>TRUE</DOUT_S>                                            <!-- logical for short term archiving -->
+        <DOUT_S_ROOT>/scratch/07931/dunyuliu/CESM1.2.2.1/archive/$CASE</DOUT_S_ROOT>               <!-- complete path to a short term archiving directory -->
+        <DOUT_L_MSROOT>USERDEFINED_optional_run</DOUT_L_MSROOT>           <!-- complete path to a long term archiving directory -->
+        <CCSM_BASELINE>USERDEFINED_optional_run</CCSM_BASELINE>           <!-- where the cesm testing scripts write and read baseline results -->
+        <CCSM_CPRNC>USERDEFINED_optional_test</CCSM_CPRNC>                <!-- path to the cprnc tool used to compare netcdf history files in testing -->
+        <BATCHQUERY>squeue</BATCHQUERY>
+        <BATCHSUBMIT>sbatch</BATCHSUBMIT>
+        <SUPPORTED_BY>dliu@ig.utexas.edu</SUPPORTED_BY>
+        <GMAKE_J>1</GMAKE_J>
+        <MAX_TASKS_PER_NODE>128</MAX_TASKS_PER_NODE>
+</machine>
+
 </config_machines>
